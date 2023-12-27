@@ -2,6 +2,9 @@ package polymorphism;
 
 public class SamsungTVImpl implements TV{
 
+	public SamsungTVImpl() {
+		System.out.println("===> SamsungTV 객체 생성 ");
+	}
 	@Override
 	public void powerOn() {
 		System.out.println("SamsungTV---전원 켠다.");
