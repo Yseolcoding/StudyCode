@@ -3,7 +3,7 @@ package polymorphism;
 public class TVUser {
 	public static void main(String[] args) {
 		
-		SamsungTV tv = new SamsungTV();
+		TV tv = new SamsungTVImpl();
 		
 		tv.powerOn();
 		tv.powerOff();
