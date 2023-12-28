@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- <bean id="tv" class="polymorphism.SamsungTVImpl" init-method="initMethod" destroy-method="destroyMethod" /> -->
@@ -11,14 +12,12 @@
 		<constructor-arg ref="sony"></constructor-arg>
 	</bean> -->
 
-	<bean id="tv" class="polymorphism.DIchange.SamsungTV" >
-		<constructor-arg ref="apple"></constructor-arg>
-		<constructor-arg value="270000"></constructor-arg>
+	<bean id="tv" class="polymorphism.DIsetterPname.SamsungTV" p:speaker-ref="sony" p:price="260000">
 	</bean>
 	
-	<bean id="sony" class="polymorphism.DIchange.SonySpeaker"></bean>
+	<bean id="sony" class="polymorphism.DIsetterPname.SonySpeaker"></bean>
 
-	<bean id="apple" class="polymorphism.DIchange.AppleSpeaker"></bean>
+	<bean id="apple" class="polymorphism.DIsetterPname.AppleSpeaker"></bean>
 	
 	<!--init-method 속성으로 지정한 메소드는 컨테이너가 구동되어 객체가 생성된 직후에 호출
 	컨테이너가 종료되기 직전에 자신이 관리하는 모든 객체를 삭제하는데, 이때 destroy-method 속성으로 지정한 메소드가 객체가 삭제되기 직전에 호출된다. -->

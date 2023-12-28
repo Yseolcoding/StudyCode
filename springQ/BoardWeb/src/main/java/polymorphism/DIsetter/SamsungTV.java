@@ -1,4 +1,4 @@
-package polymorphism.DIchange;
+package polymorphism.DIsetter;
 
 public class SamsungTV implements TV{
 
@@ -11,12 +11,12 @@ public class SamsungTV implements TV{
 	}
 
 	public void setSpeaker(Speaker speaker) {
-		System.out.println("===> setSpeaker() 호출");
+		System.out.println("===> setSpeaker() 호출 ");
 		this.speaker = speaker;
 	}
-	
+
 	public void setPrice(int price) {
-		System.out.println("===> setSpeaker() 호출");
+		System.out.println("===> setPrice() 호출 ");
 		this.price = price;
 	}
 
@@ -41,5 +41,3 @@ public class SamsungTV implements TV{
 	}
 
 }
-
-
