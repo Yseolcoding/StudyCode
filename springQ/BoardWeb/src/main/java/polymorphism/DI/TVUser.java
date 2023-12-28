@@ -1,9 +1,9 @@
-package polymorphism;
+package polymorphism.DI;
 
 public class TVUser {
 	public static void main(String[] args) {
 		
-		TV tv = new SamsungTVImpl();
+		TV tv = new SamsungTV();
 		
 		tv.powerOn();
 		tv.powerOff();

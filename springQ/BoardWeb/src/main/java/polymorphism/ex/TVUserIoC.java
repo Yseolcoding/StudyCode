@@ -1,4 +1,4 @@
-package polymorphism;
+package polymorphism.ex;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;

@@ -1,4 +1,4 @@
-package polymorphism;
+package polymorphism.ex;
 
 public class TVUserFactory {
 	public static void main(String[] args) {

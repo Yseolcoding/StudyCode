@@ -1,4 +1,4 @@
-package polymorphism;
+package polymorphism.DI;
 
 public interface TV {
 	

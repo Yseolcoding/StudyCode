@@ -1,4 +1,4 @@
-package polymorphism;
+package polymorphism.ex;
 
 public class LgTVImpl implements TV{
 	
