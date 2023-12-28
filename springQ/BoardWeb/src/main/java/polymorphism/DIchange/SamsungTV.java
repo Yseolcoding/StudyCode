@@ -1,6 +1,4 @@
-package polymorphism.DI;
-
-import polymorphism.DIchange.Speaker;
+package polymorphism.DIchange;
 
 public class SamsungTV implements TV{
 
@@ -18,7 +16,7 @@ public class SamsungTV implements TV{
 	}
 
 	public SamsungTV(Speaker speaker, int price) {
-		System.out.println("===> SamsungTV(3) 객체 생");
+		System.out.println("===> SamsungTV(3) 객체 생성");
 		this.speaker = speaker;
 		this.price = price;
 	}

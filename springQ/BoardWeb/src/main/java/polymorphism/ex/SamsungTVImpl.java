@@ -1,7 +1,7 @@
 package polymorphism.ex;
 
 public class SamsungTVImpl implements TV{
-	
+
 	public void initMethod() {
 		System.out.println("객체 초기화 작업 처리..");
 	}
@@ -9,7 +9,7 @@ public class SamsungTVImpl implements TV{
 	public void destroyMethod() {
 		System.out.println("객체 삭제 전에 처리할 로직 처리...");
 	}
-	
+
 	public SamsungTVImpl() {
 		System.out.println("===> SamsungTV 객체 생성 ");
 	}

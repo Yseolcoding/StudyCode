@@ -1,4 +1,4 @@
-package polymorphism.DI;
+package polymorphism.DIchange;
 
 public class LgTV implements TV {
 

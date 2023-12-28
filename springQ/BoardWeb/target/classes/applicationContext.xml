@@ -7,12 +7,19 @@
 
 	<!-- <bean id="tv" class="polymorphism.ex.SamsungTVImpl" scope = "singleton" />-->
 	
-	<bean id="tv" class="polymorphism.DI.SamsungTV" >
+	<!-- <bean id="tv" class="polymorphism.DI.SamsungTV" >
 		<constructor-arg ref="sony"></constructor-arg>
+	</bean> -->
+
+	<bean id="tv" class="polymorphism.DIchange.SamsungTV" >
+		<constructor-arg ref="apple"></constructor-arg>
+		<constructor-arg value="270000"></constructor-arg>
 	</bean>
 	
-	<bean id="sony" class="polymorphism.DI.SonySpeaker"></bean>
+	<bean id="sony" class="polymorphism.DIchange.SonySpeaker"></bean>
 
+	<bean id="apple" class="polymorphism.DIchange.AppleSpeaker"></bean>
+	
 	<!--init-method 속성으로 지정한 메소드는 컨테이너가 구동되어 객체가 생성된 직후에 호출
 	컨테이너가 종료되기 직전에 자신이 관리하는 모든 객체를 삭제하는데, 이때 destroy-method 속성으로 지정한 메소드가 객체가 삭제되기 직전에 호출된다. -->
 	<!-- 스프링 컨테이너가 관리하는 <bean>들은 대부분 싱글톤으로 운영되어야하기 때문에 scope값을 "singleton"으로 설정하거나 아예 생략하는 것이 일반적.

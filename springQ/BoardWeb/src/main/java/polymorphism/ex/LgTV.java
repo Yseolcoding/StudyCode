@@ -1,7 +1,7 @@
 package polymorphism.ex;
 
 public class LgTV {
-	
+
 	public void turnOn() {
 		System.out.println("LgTV-전원 켠다.");
 	}
