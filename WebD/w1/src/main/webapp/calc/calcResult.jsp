@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: seollucia
-  Date: 1/5/24
-  Time: 10:13 AM
+  Date: 1/9/24
+  Time: 8:41 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,10 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-<form action="calcResult.jsp" method="post">
-    <input type = "number" name = "num1" >
-    <input type = "number" name = "num2" >
-    <button type = "submit">SEND</button>
-</form>
+    <h1>NUM1 ${param.num1}</h1>
+    <h1>NUM2 ${param.num2}</h1>
+
+    <h1> SUM ${Integer.parseInt(param.num1) + Integer.parseInt(param.num2)}</h1>
 </body>
 </html>
