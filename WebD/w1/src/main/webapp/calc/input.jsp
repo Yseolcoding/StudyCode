@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form>
+<form action="calcResult.jsp" method="post">
     <input type = "number" name = "num1" >
     <input type = "number" name = "num1" >
     <button type = "submit">SEND</button>
