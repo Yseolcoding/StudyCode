@@ -12,8 +12,9 @@ public class CollectionBeanClient {
 		
 		CollectionBean bean = (CollectionBean) factory.getBean("collectionBean");
 		Properties addressList = bean.getAddressList();
-
-		
+//		for(Property address : Properties) {
+//			System.out.println(address.toString());
+//		}
 		factory.close();
 		
 	}
