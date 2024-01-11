@@ -2,6 +2,7 @@ package polymorphism.review;
 
 public class SamsungTV implements TV{
 	private SonySpeaker speaker;
+	private int price;
 	
 	public SamsungTV() {
 		System.out.println("===> SamsungTV(1) 객체 생성");
@@ -10,6 +11,12 @@ public class SamsungTV implements TV{
 	public SamsungTV(SonySpeaker speaker) {
 		System.out.println("===> SamsungTV(2) 객체 생성");
 		this.speaker = speaker;
+	}
+	
+	public SamsungTV(SonySpeaker speaker, int price) {
+		System.out.println("===> SamsungTV(3) 객체 생성");
+		this.speaker = speaker;
+		this.price = price;
 	}
 	
 	public void initMethod() {
@@ -21,7 +28,7 @@ public class SamsungTV implements TV{
 	}
 	
 	public void powerOn() {
-		System.out.println("SamsungTV---전원 켠다.");
+		System.out.println("SamsungTV---전원 켠다. (가격 : " + price + ")");
 	}
 	
 	public void powerOff() {

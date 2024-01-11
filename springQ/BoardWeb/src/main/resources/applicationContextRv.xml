@@ -5,6 +5,7 @@
 
 	<bean id="tv" class="polymorphism.review.SamsungTV">
 		<constructor-arg ref="sony"></constructor-arg>
+		<constructor-arg value="2700000"></constructor-arg>
 	</bean>
 
 	<bean id="sony" class="polymorphism.review.SonySpeaker"></bean>
