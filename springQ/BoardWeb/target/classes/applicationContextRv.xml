@@ -4,9 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="tv" class="polymorphism.review.SamsungTV">
-		<constructor-arg ref="sony"></constructor-arg>
+		<constructor-arg ref="apple"></constructor-arg>
 		<constructor-arg value="2700000"></constructor-arg>
 	</bean>
 
 	<bean id="sony" class="polymorphism.review.SonySpeaker"></bean>
+	
+	<bean id="apple" class="polymorphism.review.AppleSpeaker"></bean>
 </beans>
