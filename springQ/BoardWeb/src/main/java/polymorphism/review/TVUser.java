@@ -2,8 +2,10 @@ package polymorphism.review;
 
 public class TVUser {
 	public static void main(String[] args) {
+		
+	BeanFactory factory = new BeanFactory();
 
-	TV tv = new SamsungTV();
+	TV tv = (TV)factory.getBean(args[0]);
 	
 	tv.powerOn();
 	tv.volumeUp();
