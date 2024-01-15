@@ -6,7 +6,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	<context:component-scan base-package="polymorphism.review"></context:component-scan>
+	<context:component-scan base-package="polymorphism.review"/>
+	<bean class="polymorphism.review.AppleSpeaker"></bean>
 
 <!-- 	<bean id="tv" class="polymorphism.review.SamsungTV" p:speaker-ref="sony" p:price="2700000"/>
 
