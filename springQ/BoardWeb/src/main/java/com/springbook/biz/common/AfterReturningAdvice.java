@@ -15,7 +15,7 @@ public class AfterReturningAdvice {
 	@Pointcut("execution(* com.springbook.biz..*Impl.get*(..))")
 	public void getPointcut() {}
 	
-	@AfterReturning(pointcut="getPointcut()", returning="returnObj")
+	@AfterReturning(pointcut="PointcutCommon.getPointcut()", returning="returnObj")
 	public void afterLog(JoinPoint jp, Object returnObj) {
 		String method = jp.getSignature().getName();
 		if(returnObj instanceof UserVO) {
