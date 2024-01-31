@@ -6210,3 +6210,9 @@ java.net.UnknownHostException: dist.springsource.com: nodename nor servname prov
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-31 13:19:05.356
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-31 13:26:36.406
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-31 13:26:36.416
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
