@@ -9,11 +9,13 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 		
 		<!--DataSource 설정 -->
+		<context:property-placeholder location="classpath:config/database.properties"/>
+		
 		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-			<property name="driverClassName" value="org.h2.Driver"/>
-			<property name="url" value="jdbc:h2:tcp://localhost/~/test" />
-			<property name="username" value="sa" />
-			<property name="password" value="" />
+			<property name="driverClassName" value="${jdbc.driver}"/>
+			<property name="url" value="${jdbc.url}" />
+			<property name="username" value="${jdbc.username}" />
+			<property name="password" value=${jdbc.password}"" />
 		</bean>
 
 		<context:component-scan base-package="com.springbook.biz"/>
