@@ -3,14 +3,13 @@ package com.springbook.biz.board.impl;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.board.BoardVO;
 
 @Repository
-public class BoardDAOMybatis extends SqlSessionDaoSupport{
+public class BoardDAOMybatis{
 	
 	@Autowired
 	private SqlSessionTemplate mybatis;
@@ -37,7 +36,7 @@ public class BoardDAOMybatis extends SqlSessionDaoSupport{
 	
 	public List<BoardVO> getBoardList(BoardVO vo) {
 		System.out.println("===> Mybatis로 insert getBoardList() 기능 처리");
-		return mybatis.selectList("BoardDAO.getBoard", vo);
+		return mybatis.selectList("BoardDAO.getBoardList", vo);
 	}
 	
 }

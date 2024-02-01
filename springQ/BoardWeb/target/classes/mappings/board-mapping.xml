@@ -28,7 +28,7 @@
 	</delete>
 	
 	<select id="getBoard" resultType="board">
-		select * from where seq=#{seq}
+		select * from board where seq=#{seq}
 	</select>
 	
 	<select id="getBoardList" resultMap="boardResult">

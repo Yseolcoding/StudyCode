@@ -10,11 +10,21 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 		
-		<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- Spring과 Mybatis 연동 설 -->
+		<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+			<property name="configLocation" value="classpath:sql-map-config.xml"/>
+			<property name="dataSource" ref="dataSource"/>
+		</bean>
+		
+		<bean class="org.mybatis.spring.SqlSessionTemplate">
+			<constructor-arg ref="sqlSession" />
+		</bean>
+
+<!-- 		<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 			<property name="dataSource" ref="dataSource"/>
 			<property name="configLocation" value="classpath:sql-map-config.xml" />
 		</bean>
-		
+		 -->
 		<!--DataSource 설정 -->
 		<context:property-placeholder location="classpath:config/database.properties"/>
 		
@@ -23,15 +33,6 @@
 			<property name="url" value="${jdbc.url}" />
 			<property name="username" value="${jdbc.username}" />
 			<property name="password" value="${jdbc.password}" />
-		</bean>
-		
-		<!-- Spring과 Mybatis 연동 설 -->
-		<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
-			<property name="configLocation" value="classpath:sql-map-config.xml"/>
-			<property name="dataSource" ref="dataSource"/>
-		</bean>
-		<bean class="org.mybatis.spring.SqlSessionTemplate">
-			<constructor-arg ref="sqlSession" />
 		</bean>
 		
 		<!-- Spring JDBC 설정 -->
