@@ -10,6 +10,11 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 		
+		<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+			<property name="dataSource" ref="dataSource"/>
+			<property name="configLocation" value="classpath:sql-map-config.xml" />
+		</bean>
+		
 		<!--DataSource 설정 -->
 		<context:property-placeholder location="classpath:config/database.properties"/>
 		
