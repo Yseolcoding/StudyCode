@@ -28,6 +28,7 @@
 <a href="logout_proc.jsp">Log-out</a>
 <hr>
 <form action="updateBoard_proc.jsp" method="post">
+<input name="seq" type="hidden" value="<%= board.getSeq() %>" />
 <table border="1" cellpading="0" cellspacing="0">
 	<tr>
 		<td bgcolor="ADD8E6" width="70">제목</td>
