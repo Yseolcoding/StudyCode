@@ -3,7 +3,7 @@
 <%@ page import="com.springbook.biz.user.impl.UserDAO" %>
 <%@ page import="com.springbook.biz.user.UserVO" %>
 
-<%
+<%-- <%
 	// 1. 사용자 입력 정보 추출
 	String id = request.getParameter("id");
 	String password = request.getParameter("password");
@@ -22,4 +22,4 @@
 	} else {
 		response.sendRedirect("login.jsp");
 	}
-%>
+%> --%>

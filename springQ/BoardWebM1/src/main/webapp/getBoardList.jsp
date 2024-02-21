@@ -4,7 +4,7 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%
+<%-- <%
 	// 1. 사용자 입력 정보 추출(검색 기능은 나중에 구현)
 	// 2. DB 연동 처리
 	BoardVO vo = new BoardVO();
@@ -12,7 +12,7 @@
 	List<BoardVO> boardList = boardDAO.getBoardList(vo);
 	
 	// 3. 응답화면 구성
-%>
+%> --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 					  "http://www.w3.org/TR/html4/loose.dtd">
 <html>

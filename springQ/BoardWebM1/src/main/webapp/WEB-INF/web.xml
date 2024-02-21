@@ -4,11 +4,6 @@
     <servlet-name>DispatcherServlet</servlet-name>
     <servlet-class>com.springbook.view.controller.DispatcherServlet</servlet-class>
   </servlet>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>action</servlet-name>
-    <url-pattern>*.do</url-pattern>
-  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>DispatcherServlet</servlet-name>
     <url-pattern>/DispatcherServlet</url-pattern>
@@ -18,4 +13,9 @@
     <display-name>action</display-name>
     <servlet-name>action</servlet-name>
     <servlet-class>com.springbook.view.controller.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
 </web-app>
