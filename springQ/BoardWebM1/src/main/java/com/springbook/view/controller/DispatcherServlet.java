@@ -88,6 +88,7 @@ public class DispatcherServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("boardList", boardList);
 			response.sendRedirect("getBoardList.jsp");
+			
 		} else if(path.equals("/logout.do")) {
 			System.out.println("로그아웃 처리");
 		} else if(path.equals("/insertBoard.do")) {

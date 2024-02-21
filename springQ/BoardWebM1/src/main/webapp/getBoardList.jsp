@@ -13,6 +13,10 @@
 	
 	// 3. 응답화면 구성
 %> --%>
+<%
+	// 세션에 저장된 글 목록을 꺼낸다.
+	List<BoardVO> boardList = (List) session.getAttribute("boardList");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 					  "http://www.w3.org/TR/html4/loose.dtd">
 <html>
