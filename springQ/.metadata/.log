@@ -9085,3 +9085,15 @@ Caused by: org.xml.sax.SAXParseException; systemId: file:/Users/seollucia/Practi
 	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:178)
 	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:656)
 	... 8 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-21 08:59:15.579
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-21 08:59:15.583
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-21 09:27:58.536
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-21 09:27:58.542
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
