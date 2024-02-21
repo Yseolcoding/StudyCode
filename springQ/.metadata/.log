@@ -9235,3 +9235,9 @@ Caused by: org.xml.sax.SAXParseException; systemId: file:/Users/seollucia/Practi
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-21 10:03:04.863
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-21 10:49:53.313
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-21 10:49:53.318
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
