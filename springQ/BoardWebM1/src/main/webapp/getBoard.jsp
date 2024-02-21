@@ -2,7 +2,7 @@
 <%@ page import="com.springbook.biz.board.BoardVO" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%
+<%-- <%
 	// 1. 검색할 게시글 번호 추출
 	String seq = request.getParameter("seq");
 
@@ -14,6 +14,10 @@
 	BoardVO board = boardDAO.getBoard(vo);
 	
 	// 3. 응답화면 구성
+%> --%>
+<%
+	// 세션에 저장된 게시글 정보를 꺼낸다.
+	BoardVO board = (BoardVO) session.getAttribute("board");
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
