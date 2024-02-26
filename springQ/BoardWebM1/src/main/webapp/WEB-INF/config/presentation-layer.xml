@@ -3,5 +3,15 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
+	<!-- HandlerMapping 등록 -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings".
+			<props>
+				<prop key="/login.do">login</prop>
+			</props>
+		</property>
+	</bean>	
+	
+	<!-- Controller 등 -->
+	<bean id="login" class="com.springbook.view.user.LoginController"></bean>
 </beans>
