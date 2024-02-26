@@ -3,6 +3,7 @@ package com.springbook.view.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.springbook.view.board.DeleteBoardController;
 import com.springbook.view.board.GetBoardController;
 import com.springbook.view.board.InsertBoardController;
 import com.springbook.view.board.UpdateBoardController;
@@ -20,6 +21,7 @@ public class HandlerMapping {
 		mappings.put("/getBoard.do", new GetBoardController());
 		mappings.put("/insertBoard.do", new InsertBoardController());
 		mappings.put("/updateBoard.do", new UpdateBoardController());
+		mappings.put("/deleteBoard.do", new DeleteBoardController());
 	}
 	
 	public Controller getController(String path) {
