@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.springbook.view.board.GetBoardController;
+import com.springbook.view.board.InsertBoardController;
 import com.springbook.view.board.getBoardListController;
 import com.springbook.view.user.LoginController;
 
@@ -16,6 +17,7 @@ public class HandlerMapping {
 		mappings.put("/login.do", new LoginController());
 		mappings.put("/getBoardList.do", new getBoardListController());
 		mappings.put("/getBoard.do", new GetBoardController());
+		mappings.put("/insertBoard.do", new InsertBoardController());
 	}
 	
 	public Controller getController(String path) {
