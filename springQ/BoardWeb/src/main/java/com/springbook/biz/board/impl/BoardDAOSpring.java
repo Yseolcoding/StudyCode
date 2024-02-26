@@ -1,75 +1,59 @@
 package com.springbook.biz.board.impl;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
+
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.board.BoardVO;
 
-//DAO(Data Access Object
+//DAO(Data Access Object)
 @Repository
-public class BoardDAOSpring{
-	
+public class BoardDAOSpring {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	//SQL Î™ÖÎ†πÏñ¥Îì§
-	private final String BOARD_INSERT = "insert into board(seq, title, writer, content) "
-			+ "values(?, ?, ?, ?)";
-//			+ "values((select nvl(max(seq), 0)+1 from board), ?, ?, ?)";
-	private final String BOARD_UPDATE = "update board set title=?, content=?, where seq=?";
+	// SQL ∏Ì∑…æÓµÈ
+//	private final String BOARD_INSERT = "insert into board(seq, title, writer, content) values((select nvl(max(seq), 0)+1 from board),?,?,?)";
+	private final String BOARD_INSERT = "insert into board(seq, title, writer, content) values(?, ?, ?, ?)";
+	private final String BOARD_UPDATE = "update board set title=?, content=? where seq=?";
 	private final String BOARD_DELETE = "delete board where seq=?";
 	private final String BOARD_GET = "select * from board where seq=?";
 	private final String BOARD_LIST = "select * from board order by seq desc";
-	
-	// CRUD Í∏∞Îä•Ïùò Î©îÏÜåÎìú Íµ¨ÌòÑ
-	// Í∏Ä Îì±Î°ù
+
+	// CRUD ±‚¥…¿« ∏ﬁº“µÂ ±∏«ˆ
+	// ±€ µÓ∑œ
 	public void insertBoard(BoardVO vo) {
-		System.out.println("===> JDBCÎ°ú insertBoard() Í∏∞Îä• Ï≤òÎ¶¨");
-		jdbcTemplate.update(BOARD_INSERT,vo.getSeq(), vo.getTitle(), vo.getWriter(),vo.getContent());
-//		jdbcTemplate.update(BOARD_INSERT,vo.getTitle(), vo.getWriter(),vo.getContent());
+		System.out.println("===> Spring JDBC∑Œ insertBoard() ±‚¥… √≥∏Æ");
+		jdbcTemplate.update(BOARD_INSERT, vo.getSeq(), vo.getTitle(), vo.getWriter(), vo.getContent());
 	}
-	
-	// Í∏Ä ÏàòÏ†ï
+
+	// ±€ ºˆ¡§
 	public void updateBoard(BoardVO vo) {
-		System.out.println("===> JDBCÎ°ú udpateBoard() Í∏∞Îä• Ï≤òÎ¶¨");
+		System.out.println("===> Spring JDBC∑Œ updateBoard() ±‚¥… √≥∏Æ");
 		jdbcTemplate.update(BOARD_UPDATE, vo.getTitle(), vo.getContent(), vo.getSeq());
 	}
-	
-	// Í∏Ä ÏÇ≠Ï†ú
+
+	// ±€ ªË¡¶
 	public void deleteBoard(BoardVO vo) {
-		System.out.println("===> JDBCÎ°ú deleteBoard() Í∏∞Îä• Ï≤òÎ¶¨");
+		System.out.println("===> Spring JDBC∑Œ deleteBoard() ±‚¥… √≥∏Æ");
 		jdbcTemplate.update(BOARD_DELETE, vo.getSeq());
 	}
-	
-	// Í∏Ä ÏÉÅÏÑ∏ Ï°∞Ìöå
+
+	// ±€ ªÛºº ¡∂»∏
 	public BoardVO getBoard(BoardVO vo) {
-		System.out.println("===> JDBCÎ°ú getBoard() Í∏∞ Ï≤òÎ¶¨");
-		Object[] args = {vo.getSeq()};
+		System.out.println("===> Spring JDBC∑Œ getBoard() ±‚¥… √≥∏Æ");
+		Object[] args = { vo.getSeq() };
 		return jdbcTemplate.queryForObject(BOARD_GET, args, new BoardRowMapper());
 	}
-	
-	// Í∏Ä Î™©Î°ù Ï°∞Ìöå
-	public List<BoardVO> getBoardList(BoardVO vo){
-		System.out.println("===> JDBCÎ°ú getBoardList() Í∏∞Îä• Ï≤òÎ¶¨");
+
+	// ±€ ∏Ò∑œ ¡∂»∏
+	public List<BoardVO> getBoardList(BoardVO vo) {
+		System.out.println("===> Spring JDBC∑Œ getBoardList() ±‚¥… √≥∏Æ");
 		return jdbcTemplate.query(BOARD_LIST, new BoardRowMapper());
-	}
-}
-
-
-class BoardRowMapper implements RowMapper<BoardVO> {
-	public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException {
-		BoardVO board = new BoardVO();
-		board.setSeq(rs.getInt("SEQ"));
-		board.setTitle(rs.getString("TITLE"));
-		board.setWriter(rs.getString("WRITER"));
-		board.setContent(rs.getString("CONTENT"));
-		board.setRegDate(rs.getDate("REGDATE"));
-		board.setCnt(rs.getInt("CNT"));
-		return board;
 	}
 }

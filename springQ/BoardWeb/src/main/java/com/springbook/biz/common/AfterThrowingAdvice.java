@@ -3,29 +3,25 @@ package com.springbook.biz.common;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Service;
 
 @Service
 @Aspect
 public class AfterThrowingAdvice {
 	
-	@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
-	public void allPointcut() {}
-
-	@AfterThrowing(pointcut="allPointcut()", throwing="exceptObj")
+	@AfterThrowing(pointcut="PointcutCommon.allPointcut()", throwing="exceptObj")
 	public void exceptionLog(JoinPoint jp, Exception exceptObj) {
-
 		String method = jp.getSignature().getName();
-		
-		System.out.println(method + "() ë©”ì†Œë“œ ìˆ˜í–‰ì¤‘ ì˜ˆì™¸ë°œìƒ");
-		
-		if(exceptObj instanceof IllegalArgumentException) {
-			System.out.println("ë¶€ì í•©í•œ ê°’ì´ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤.");
-		} else if(exceptObj instanceof NumberFormatException) {
-			System.out.println("ìˆ«ì í˜•ì‹ì˜ ê°’ì´ ì•„ë‹™ë‹ˆë‹¤.");
-		} else if(exceptObj instanceof Exception) {
-			System.out.println("ë¬¸ì œê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
+		// System.out.println("[¿¹¿Ü Ã³¸®] " + method + "() ¸Ş¼Òµå ¼öÇà Áß ¹ß»ıµÈ ¿¹¿Ü ¸Ş½ÃÁö : "
+		// + exceptObj.getMessage());
+
+		System.out.println(method + "() ¸Ş¼Òµå ¼öÇà Áß ¿¹¿Ü ¹ß»ı!");
+		if (exceptObj instanceof IllegalArgumentException) {
+			System.out.println("ºÎÀûÇÕÇÑ °ªÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù.");
+		} else if (exceptObj instanceof NumberFormatException) {
+			System.out.println("¼ıÀÚ Çü½ÄÀÇ °ªÀÌ ¾Æ´Õ´Ï´Ù.");
+		} else if (exceptObj instanceof Exception) {
+			System.out.println("¹®Á¦°¡ ¹ß»ıÇß½À´Ï´Ù.");
 		}
 	}
 }

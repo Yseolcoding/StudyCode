@@ -5,7 +5,7 @@
 
 	<!-- HandlerMapping 등록 -->
 	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings".
+		<property name="mappings">
 			<props>
 				<prop key="/login.do">login</prop>
 			</props>
