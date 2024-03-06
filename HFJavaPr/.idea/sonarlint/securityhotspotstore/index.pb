@@ -7,3 +7,9 @@ S
 #src/com/example/ch1/BottleSong.java,2/6/26beaca5232cfae85f6192cd54292277cd8fb6bf
 X
 (src/main/com/example/ch1/BottleSong.java,c/b/cba340e19707a975379191c3004fcdb7de7a5b66
+T
+$src/main/com/ch1/ex1/BottleSong.java,7/d/7d0dea67f5d0753a67eb52b692e677334f68e332
+T
+$src/main/com/ch1/ex2/BottleSong.java,2/2/2256c921460772afc839eadd2d06b109cf21b7c0
+V
+&src/main/com/ch1/ex2/PhraseOMatic.java,a/0/a0312326211461246e0e4d94df04b512e9ab29b5

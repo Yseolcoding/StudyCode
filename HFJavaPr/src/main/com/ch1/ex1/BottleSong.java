@@ -1,4 +1,4 @@
-package main.com.example.ch1;
+package main.com.ch1.ex1;
 
 public class BottleSong {
     public static void main(String[] args){
