@@ -2,7 +2,7 @@ package main.com.ch1.ex1;
 
 public class BottleSong {
     public static void main(String[] args){
-        int bottlesNum = 10;
+        int bottlesNum = 2;
         String word = "bottles"; // 복수형
 
         while(bottlesNum > 0) {
