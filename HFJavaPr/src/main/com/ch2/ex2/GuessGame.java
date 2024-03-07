@@ -26,7 +26,7 @@ public class GuessGame {
 
         // 선수들이 맞힐 숫자 만들기
         int targetNumber = (int) (Math.random() * 10);
-        System.out.println("0이상 9 이하의 숫자를 맞혀 보세요.");
+        System.out.println("0이상 9 이하의 숫자를 맞히는 게임입니다.");
 
         // 게임 진행
         while(true) {
