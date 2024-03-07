@@ -19,3 +19,9 @@ M
 src/main/com/ch2/ex1/Dog.java,6/2/62acb56eb4292f0043820181d411409462e59919
 V
 &src/main/com/ch2/ex1/DogTestDrive.java,3/a/3a20a0a7baba4c533aec56ee4cdbadf82a4f769d
+V
+&src/main/com/ch2/ex2/GameLauncher.java,5/d/5d1c0a42d0deea03d6a68c151ef67081a592ec15
+S
+#src/main/com/ch2/ex2/GuessGame.java,8/b/8be9005d916dd666c35d4c48516dcb3b18c2de43
+P
+ src/main/com/ch2/ex2/Player.java,1/6/16d12be3220180b53499b15c56aae0611ccc0146
