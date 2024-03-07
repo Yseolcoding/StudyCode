@@ -1,5 +1,0 @@
-
-K
-java:S2140	")Use "java.util.Random.nextInt()" instead.(õ®ÁŽþÿÿÿÿ8‘ÁË³á1
-F	java:S106
-"+Replace this use of System.out by a logger.(¾ªüb8’ÁË³á1
