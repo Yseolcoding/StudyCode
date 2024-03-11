@@ -22,7 +22,7 @@ public class SimpleStartupGame {
         //아직 살아 있으면 계속 반복합니다.
         while(isAlive){
             //사용자가 추측한 값을 가져옵니다.
-            int guess = helper.getUserInput("enter a number");
+            int guess = helper.getUserInput("enter a number ");
             //스타트업 객체를 통해 추측한 값이 맞는지 확인합니다. 리턴 결과는 String에 저장합니다.
             String result = theStartup.checkYourself(guess);
             numOfGuesses++;
