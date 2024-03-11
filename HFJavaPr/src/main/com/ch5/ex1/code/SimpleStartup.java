@@ -1,4 +1,4 @@
-package main.com.ch5.ex1.test;
+package main.com.ch5.ex1.code;
 
 public class SimpleStartup {
     private int[] locationCells;
