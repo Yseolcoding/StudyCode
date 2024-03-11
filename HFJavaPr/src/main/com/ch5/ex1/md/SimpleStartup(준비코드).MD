@@ -1,5 +1,5 @@
-## SimpleStartup 클래스
-### 준비코드
+# SimpleStartup 클래스
+## 준비코드
 <br>
 
 셀의 위치를 저장하기 위한 locationCells라는 int 배열을 **선언**합니다.  
