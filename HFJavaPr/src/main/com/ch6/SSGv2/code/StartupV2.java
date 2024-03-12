@@ -2,7 +2,7 @@ package main.com.ch6.SSGv2.code;
 
 import java.util.ArrayList;
 
-public class Startup {
+public class StartupV2 {
 
     private ArrayList<String> locationCells;
     //private int numOfHits = 0;
