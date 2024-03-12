@@ -1,4 +1,4 @@
-package main.com.ch5.ex1.code;
+package main.com.ch6.SSGv2.code;
 
 /*
     테스트 해야할 것

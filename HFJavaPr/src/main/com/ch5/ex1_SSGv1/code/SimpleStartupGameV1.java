@@ -1,14 +1,14 @@
-package main.com.ch5.ex1.code;
+package main.com.ch5.ex1_SSGv1.code;
 
-public class SimpleStartupGame {
+public class SimpleStartupGameV1 {
     public static void main(String[] args) {
         //사용자가 추측한 횟수를 추적하기 위한 변수를 만듭니다.
         int numOfGuesses = 0;
         //일단 사용자로부터 입력을 받기 위한 메서드가 들어있는 특별한 클래스가 있다고 생각합시다.
-        GameHelper helper = new GameHelper();
+        GameHelperV1 helper = new GameHelperV1();
 
         //스타트업 객체를 만듭니다.
-        SimpleStartup theStartup = new SimpleStartup();
+        SimpleStartupV1 theStartup = new SimpleStartupV1();
         //첫번째 셀 위치를 정하기 위한 난수를 만듭니다.
         int randomNum = (int) (Math.random() * 5);
 

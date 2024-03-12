@@ -1,6 +1,6 @@
-package main.com.ch5.ex1.code;
+package main.com.ch5.ex1_SSGv1.code;
 
-public class SimpleStartup {
+public class SimpleStartupV1 {
     private int[] locationCells;
     private int numOfHits = 0;
 
