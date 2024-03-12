@@ -16,7 +16,7 @@ public class SimpleStartupGame {
         int[] locations = {randomNum, randomNum+1, randomNum+2};
         //스타트업의 위치를 지정합니다(배열 사용).
         theStartup.setLocationCells(locations);
-        //스타트업이 살아 있는지 추적하기 위한 불리업 변수를 만들고,
+        //스타트업이 살아 있는지 추적하기 위한 불리언 변수를 만들고,
         boolean isAlive = true;
 
         //아직 살아 있으면 계속 반복합니다.
