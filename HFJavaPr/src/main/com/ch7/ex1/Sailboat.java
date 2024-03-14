@@ -1,4 +1,4 @@
-package main.com.ch6.ex2;
+package main.com.ch7.ex1;
 
 public class Sailboat extends Boat{
 
