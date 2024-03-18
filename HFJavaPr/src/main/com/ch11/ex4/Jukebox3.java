@@ -1,4 +1,4 @@
-package main.com.ch11.ex3;
+package main.com.ch11.ex4;
 
 
 import java.util.Collections;
@@ -7,19 +7,19 @@ import java.util.List;
 /*
     p. 359 예시
  */
-public class Jukebox2 {
+public class Jukebox3 {
     public static void main(String[] args) {
-        new Jukebox2().go();
+        new Jukebox3().go();
     }
 
     public void go() {
         // List의 타입을 String이 아닌 SongV2로 변경합니다.
         // 가짜 클래스(MockSongs)를 호출해서 곡 데이터를 곡명 리스트에 채워 줍니다.
-        List<SongV2> songList = MockSongs.getSongsV2();
+        List<SongV3> songList = MockSongs.getSongsV3();
         System.out.println(songList);
 
         // 다시 한번 sort 메서드를 호출해서 곡 정렬하기.
-        //Collections.sort(songList);  // => 에러 나는 부분 주석 처리
+        Collections.sort(songList);  // => 에러 나는 부분 주석 처리
         System.out.println(songList);
     }
 }
