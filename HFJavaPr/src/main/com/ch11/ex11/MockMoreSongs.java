@@ -1,10 +1,10 @@
-package main.com.ch11.ex10;
+package main.com.ch11.ex11;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MockMoreSongs {
-    public static List<SongV4> getSongsV4() {
+    public static List<SongV4> getSongsV3() {
         List<SongV4> songs = new ArrayList<>();
         songs.add(new SongV4("somersault", "zero 7", 147));
         songs.add(new SongV4("cassidy", "grateful dead", 158));

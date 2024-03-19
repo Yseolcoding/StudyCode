@@ -16,7 +16,7 @@ public class Jukebox9 {
 
     public void go() {
         // SongListMore.txt의 내용과 똑같은 값을 가지는 SongV4 객체의 List를 리턴하는 MockMoreSongs 클래스 생성
-        List<SongV4> songList = MockMoreSongs.getSongsV3();
+        List<SongV4> songList = MockMoreSongs.getSongsV4();
         System.out.println(songList);
 
         songList.sort((one, two) -> one.getTitle().compareTo(two.getTitle()));
@@ -28,12 +28,3 @@ public class Jukebox9 {
         System.out.println(songSet);
     }
 }
-
-/*
-    실행 결과 :
-    [somersault, cassidy, $10, havana, $10, Cassidy, 50 ways]
-    [$10, $10, 50 ways, Cassidy, cassidy, havana, somersault]
-    [somersault, cassidy, 50 ways, $10, Cassidy, havana, $10]
-
-    * 여전히 중복된 항목들이 남아있고, HashSet에 집어넣고 나니 정렬된 순서가 다 뒤섞이게 됨.
- */
