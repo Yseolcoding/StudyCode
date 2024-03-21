@@ -4,6 +4,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /*
+    p.396 Comparator를 인자로 받아들이는 TreeSet의 오버로드된 생성자 사용
     p.395 TreeSet에 관해 꼭 알아야 할 것들
  */
 public class TestTree {
@@ -15,8 +16,8 @@ public class TestTree {
         Book b1 = new Book("How Cats Work");
         Book b2 = new Book("Remix your body");
         Book b3 = new Book("Finding Emo");
-
-        Set<Book> tree = new TreeSet<>();
+        BookCompare bookCompare = new BookCompare();
+        Set<Book> tree = new TreeSet<>(bookCompare);
         tree.add(b1);
         tree.add(b2);
         tree.add(b3);
