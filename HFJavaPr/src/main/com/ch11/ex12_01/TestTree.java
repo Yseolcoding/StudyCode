@@ -1,10 +1,9 @@
-package main.com.ch11.ex12;
+package main.com.ch11.ex12_01;
 
 import java.util.Set;
 import java.util.TreeSet;
 
 /*
-    p.396 Book 클래스에 Comparable 구현
     p.395 TreeSet에 관해 꼭 알아야 할 것들
  */
 public class TestTree {
