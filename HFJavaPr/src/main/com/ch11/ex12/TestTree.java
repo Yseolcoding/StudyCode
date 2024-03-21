@@ -27,5 +27,16 @@ public class TestTree {
 /*
     1. 이 코드를 컴파일하면 어떻게 될까?
     - 컴파일은 정상적으로 실행된다.
-    2.
+    2. 컴파일하고 나서 Test Tree 클래스를 실행하면 어떤 결과가 나올까요?
+    - 예외가 발생됩니다.
+    Exception in thread "main" java.lang.ClassCastException: class main.com.ch11.ex12.Book cannot be cast to class java.lang.Comparable (main.com.ch11.ex12.Book is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
+	at java.base/java.util.TreeMap.compare(TreeMap.java:1569)
+	at java.base/java.util.TreeMap.addEntryToEmptyMap(TreeMap.java:776)
+	at java.base/java.util.TreeMap.put(TreeMap.java:785)
+	at java.base/java.util.TreeMap.put(TreeMap.java:534)
+	at java.base/java.util.TreeSet.add(TreeSet.java:255)
+	at main.com.ch11.ex12.TestTree.go(TestTree.java:20)
+	at main.com.ch11.ex12.TestTree.main(TestTree.java:11)
+	3. (컴파일할 때나 실행할 때) 이 코드에 문제가 있다면 어떻게 고쳐야 할까요?
+	- Book을 Comparable로 만들거나 TreeSet에 Comparator를 전달합니다.
  */
