@@ -5,6 +5,9 @@ import javax.sound.midi.*;
 import static javax.sound.midi.ShortMessage.NOTE_OFF;
 import static javax.sound.midi.ShortMessage.NOTE_ON;
 
+/*
+    p. 490 버전 1: 첫번째 사운드 애플리케이션 만들기
+ */
 public class MiniMiniMusicApp {
     public static void main(String[] args) {
         MiniMiniMusicApp mini = new MiniMiniMusicApp();
