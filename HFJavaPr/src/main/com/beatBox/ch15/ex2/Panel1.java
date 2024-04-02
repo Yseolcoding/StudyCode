@@ -18,11 +18,16 @@ public class Panel1 {
         panel.setBackground(Color.blue);
 
         JButton button = new JButton("shock me");
+        JButton buttonTwo = new JButton("bliss");
+        JButton buttonThree = new JButton("Huh?");
+
         panel.add(button);
+        panel.add(buttonTwo);
+        panel.add(buttonThree);
 
         frame.getContentPane()
              .add(BorderLayout.EAST, panel);
-        frame.setSize(200, 200);
+        frame.setSize(250, 200);
         frame.setVisible(true);
     }
 }
