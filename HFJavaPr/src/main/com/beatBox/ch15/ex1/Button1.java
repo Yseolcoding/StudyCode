@@ -14,8 +14,10 @@ public class Button1 {
 
     public void go() {
         JFrame frame = new JFrame();
-        JButton button = new JButton("click like you mean it");
-        frame.getContentPane().add(BorderLayout.EAST, button);
+        JButton button = new JButton("Click This!");
+        Font bigFont = new Font("serif", Font.BOLD, 28);
+        button.setFont(bigFont);
+        frame.getContentPane().add(BorderLayout.NORTH, button);
         frame.setSize(200, 200);
         frame.setVisible(true);
     }
