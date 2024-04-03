@@ -17,6 +17,10 @@ public class Panel1 {
         JPanel panel = new JPanel();
         panel.setBackground(Color.blue);
 
+        // 레이아웃 관리자를 새로 만든 BoxLayout의 인스턴스로 설정
+        // BoxLayout 생성자를 호출할 때는 레이아웃할 구성요소(패널)와 방향(수직 방향으로 배치할 때는 Y_AXIS)을 지정해야 합니다.
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
         JButton button = new JButton("shock me");
         JButton buttonTwo = new JButton("bliss");
         JButton buttonThree = new JButton("Huh?");
